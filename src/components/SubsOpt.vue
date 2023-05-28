@@ -10,9 +10,10 @@
           >
             <h3 class="text-lg font-semibold mb-4 md:text-left text-center">Renovar Suscripcion</h3>
             <p class="text-sm"></p>
-            <button class="bg-cyan-700 md:w-28 w-full h-10 text-sm font-extrabold rounded-lg">
-              <a href="/renov-sub">Renovar</a>
+            <RouterLink to="/renov-sub"><button class="bg-cyan-700 md:w-28 w-full h-10 text-sm font-extrabold rounded-lg">
+              Renovar
             </button>
+          </RouterLink>
           </div>
 
           <!-- Opción 2 -->
@@ -21,12 +22,21 @@
           >
             <h3 class="text-lg font-semibold mb-4 md:text-left text-center">Nueva Suscripcion</h3>
             <p class="text-sm"></p>
-            <button class="bg-cyan-700 md:w-28 w-full h-9 text-sm font-extrabold rounded-lg">
-              <a href="/new-sub">Agregar</a>
-            </button>
+            <RouterLink to="/new-sub">
+              <button class="bg-cyan-700 md:w-28 w-full h-9 text-sm font-extrabold rounded-lg">Agregar</button>
+            </RouterLink>
           </div>
         </div>
       </div>
     </section>
   </div>
+  <RouterView/>
 </template>
+<script>
+import { RouterLink, RouterView } from 'vue-router'
+export default {
+  components:{
+    RouterLink,RouterView
+  }
+}
+</script>
